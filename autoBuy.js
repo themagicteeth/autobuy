@@ -5,7 +5,7 @@ function getItemsInStockToBuy(itemsToBuy) {
   }
   
 function buyItem(itemsToBuy) {
-    const toBuy = getItemsInStockToBuy()
+    const toBuy = getItemsInStockToBuy(itemsToBuy)
     if (toBuy.length === 0) {
         console.log("No items to buy")
         setTimeout(location.reload.bind(location), 7000);
