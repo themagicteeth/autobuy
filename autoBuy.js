@@ -9,5 +9,3 @@ function buyItem() {
     document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
     document.getElementById('confirm-link').click()
 }
-
-buyItem()
