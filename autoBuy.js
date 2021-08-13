@@ -4,8 +4,8 @@ function getItemsInStockToBuy(itemsToBuy) {
     return itemsToBuy.filter(item => itemsInStock.includes(item));
   }
   
-function buyItem() {
-    const toBuy = getItemsInStockToBuy()
+function buyItem(itemsToBuy) {
+    const toBuy = getItemsInStockToBuy(itemsToBuy)
     document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
     document.getElementById('confirm-link').click()
 }
