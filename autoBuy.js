@@ -1,4 +1,4 @@
-function getItemsInStockToBuy() {
+function getItemsInStockToBuy(itemsToBuy) {
     const itemsInStock = []
     document.querySelectorAll('.item-img').forEach(item => itemsInStock.push(item.getAttribute('data-name')));
     return itemsToBuy.filter(item => itemsInStock.includes(item));
