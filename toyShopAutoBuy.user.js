@@ -3,8 +3,8 @@
 // @namespace   Neopets Auto Buy
 // @match       https://www.neopets.com/objects.phtml?obj_type=3&type=shop
 // @match       https://www.neopets.com/objects.phtml?obj_type=3&type=shop
-// @require     https://raw.githubusercontent.com/themagicteeth/autobuy/main/autoBuy.js
-// @require     https://raw.githubusercontent.com/themagicteeth/autobuy/main/autoHaggle.js
+// @require     autoBuy.js
+// @require     autoHaggle.js
 // @grant       none
 // @version     1.0
 // @author      -
