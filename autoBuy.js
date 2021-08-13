@@ -1,10 +1,12 @@
 function getItemsInStockToBuy(itemsToBuy) {
     const itemsInStock = []
     document.querySelectorAll('.item-img').forEach(item => itemsInStock.push(item.getAttribute('data-name')));
+    console.log(itemsInStock)
     return itemsToBuy.filter(item => itemsInStock.includes(item));
   }
   
 function buyItem(itemsToBuy) {
+    console.log(itemsToBuy)
     const toBuy = getItemsInStockToBuy(itemsToBuy)
     if (toBuy.length === 0) {
         console.log("No items to buy")
