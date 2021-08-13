@@ -5,7 +5,13 @@ function getItemsInStockToBuy(itemsToBuy) {
   }
   
 function buyItem(itemsToBuy) {
-    const toBuy = getItemsInStockToBuy(itemsToBuy)
-    document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
-    document.getElementById('confirm-link').click()
+    const toBuy = getItemsInStockToBuy()
+    if (toBuy.length === 0) {
+        console.log("No items to buy")
+        setTimeout(location.reload.bind(location), 7000);
+    } 
+  else {
+        document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
+        document.getElementById('confirm-link').click()
+    }
 }
