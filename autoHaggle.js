@@ -1,14 +1,3 @@
-// ==UserScript==
-// @name        Neopets Auto Haggler
-// @version     2.0.1
-// @namespace   Neopets Auto Buy
-// @description Neopets autohaggler, part of the Auto Buy Suite
-// @Match       http://www.neopets.com/haggle.phtml*
-// @Match       http://www.neopets.com/haggle.phtml
-// @include     http://www.neopets.com/objects.phtml?obj_type=*&type=shop
-// @include     http://www.neopets.com/objects.phtml?type=shop&obj_type=*
-// ==/UserScript==
-
 var url = document.URL;
 var OCR = true;
 var return_ab = true;
