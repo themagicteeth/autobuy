@@ -74,7 +74,7 @@ function solve_captcha(url) {
 
         var haggle_price = $('#shopkeeper_makes_deal').find('b').get(0).innerHTML;
         haggle_price = (haggle_price.match("([0-9-,]+)")[0]).replace(",", "");
-        $('input[name=current_offer]').val(Math.round(parseInt(haggle_price * .88)).toString());
+        $('input[name=current_offer]').val(Math.round(parseInt(haggle_price * 93)).toString());
 
         if (OCR) {
             const {lowx: x, lowy: y} = await solve_captcha(document.querySelector('input[type="image"]').src);
