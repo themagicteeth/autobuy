@@ -4,7 +4,6 @@
 // @match       https://www.neopets.com/objects.phtml?obj_type=73&type=shop
 // @match       http://www.neopets.com/objects.phtml?obj_type=73&type=shop
 // @require     autoBuy.js
-// @require     autoHaggle.js
 // @grant       none
 // @version     1.0
 // @author      -
