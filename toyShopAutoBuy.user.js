@@ -56,5 +56,4 @@ const itemsToBuy = [
     "Glowing Mushrooms"
 ]
 
-
 buyItem(itemsToBuy)
