@@ -52,7 +52,6 @@ function solve_captcha(url) {
     if (url.includes('objects.phtml')){
        const content = $('table[align="center"][cellpadding="4"][border="0"]').get(0);
        $(content).find('tr').each((index, tr) => {
-
            $(tr).find('td').each((index, td) => {
                 const b = $(td).find('b').first().html();
                 if (b === 'Toy Train') {
@@ -79,18 +78,19 @@ function solve_captcha(url) {
         if (OCR) {
             const {lowx: x, lowy: y} = await solve_captcha(document.querySelector('input[type="image"]').src);
             setTimeout(()=> {
-                var haggleform = document.querySelector('form[name="haggleform"]');
-                var newInput = document.createElement("input");
-                var newInput2 = document.createElement("input");
+                let haggleform = document.querySelector('form[name="haggleform"]');
+                let newInput = document.createElement("input");
+                let newInput2 = document.createElement("input");
 
-                newInput.type="hidden";
-                newInput.name="x";
-                newInput.value=x;
+                newInput.type = "hidden";
+                newInput.name = "x";
+                newInput.value = x;
                 haggleform.appendChild(newInput);
 
-                newInput2.type="hidden";
-                newInput2.name="y";
-                newInput2.value=y;
+                newInput2.type = "hidden";
+                newInput2.name = "y";
+                newInput2.value = y;
+                
                 haggleform.appendChild(newInput2);
                 haggleform.submit();
             }, (min, max) => { return Math.floor(Math.random() * (max - min + 1)) + min; });
