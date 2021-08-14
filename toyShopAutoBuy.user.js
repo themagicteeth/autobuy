@@ -1,8 +1,10 @@
 // ==UserScript==
-// @name        Toy Shop
+// @name        Toy Shop Auto Buy
 // @namespace   Neopets Auto Buy
 // @match       https://www.neopets.com/objects.phtml?obj_type=3&type=shop
 // @match       https://www.neopets.com/objects.phtml?obj_type=3&type=shop
+// @match       https://www.neopets.com/haggle.phtml
+// @match       http://www.neopets.com/haggle.phtml
 // @require     autoBuy.js
 // @require     autoHaggle.js
 // @grant       none
@@ -11,6 +13,8 @@
 // @description Auto buy for Toy Shop
 // ==/UserScript==
 
+// Modify this list for your desired items
+// Items in list from https://neopets-cheats.com/neopets-restocking-guide/
 const itemsToBuy = [
     "Usukicon Y22 Goodie Bag",
     "Neopets 21st Birthday Goodie Bag",

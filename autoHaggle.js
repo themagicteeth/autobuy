@@ -67,9 +67,10 @@ function solve_captcha(url) {
 
     if (url.includes('haggle.phtml')) {
 
-        if (html.includes('SOLD OUT!') && return_ab) {
-           $.find('input[type="submit"]')[1].click();
-        }
+        if(html.includes('SOLD OUT!')){
+            if(return_ab) $.find('input[type="submit"]')[1].click();
+            return;
+         }
 
         var haggle_price = $('#shopkeeper_makes_deal').find('b').get(0).innerHTML;
         haggle_price = (haggle_price.match("([0-9-,]+)")[0]).replace(",", "");
@@ -98,3 +99,5 @@ function solve_captcha(url) {
         return;
     }
 })();
+
+

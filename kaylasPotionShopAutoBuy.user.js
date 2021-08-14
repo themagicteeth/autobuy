@@ -13,6 +13,8 @@
 // @description Auto buy for Kayla's Potion Shop
 // ==/UserScript==
 
+// Modify this list for your desired items
+// Items in list from https://neopets-cheats.com/neopets-restocking-guide/
 const itemsToBuy = [
     "Elixir of Levelling",
     "Bubbling Fungus",
