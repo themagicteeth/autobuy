@@ -1,12 +1,15 @@
 // ==UserScript==
 // @name        Spooky Foods Auto Buy
 // @namespace   Neopets Auto Buy
-// @match       http://www.neopets.com/objects.phtml?obj_type=30&type=shop
 // @match       https://www.neopets.com/objects.phtml?obj_type=30&type=shop
+// @match       http://www.neopets.com/objects.phtml?obj_type=30&type=shop
+// @match       http://www.neopets.com/objects.phtml?type=shop&obj_type=30
+// @match       https://www.neopets.com/objects.phtml?type=shop&obj_type=30
 // @match       https://www.neopets.com/haggle.phtml
+// @match       https://www.neopets.com/haggle.phtml*
+// @match       http://www.neopets.com/haggle.phtml*
 // @match       http://www.neopets.com/haggle.phtml
 // @require     autoBuy.js
-// @require     autoHaggle.js
 // @grant       none
 // @version     1.0
 // @author      -
@@ -44,4 +47,6 @@ const itemsToBuy = [
     "Coffee of the Dead"
 ]
 
-buyItem(itemsToBuy)
+if (document.URL !== 'http://www.neopets.com/haggle.phtml'){
+    buyItem(itemsToBuy, 9000)
+}
