@@ -7,7 +7,7 @@ var max = 1500;
 const html = $('html').html();
 
 
-if(html.includes('I accept your offer') || html.includes('SOLD OUT!')){
+if(html.includes('I accept your offer') || html.includes('SOLD OUT!') || html.includes('five seconds')){
   document.querySelector("#container__2020 > div.shop-bg").click()
 }
 
