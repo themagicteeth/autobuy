@@ -11,24 +11,22 @@ if(html.includes('I accept your offer') || html.includes('SOLD OUT!')){
   document.querySelector("#container__2020 > div.shop-bg").click()
 }
 
-function getItemsInStockToBuy(itemsToBuy) {
+function buyItem(itemsToBuy, refreshDelay) {
   const itemsInStock = []
   document.querySelectorAll('.item-img').forEach(item => itemsInStock.push(item.getAttribute('data-name')));
-  console.log("Items in Stock: ", itemsInStock)
-  return itemsToBuy.filter(item => itemsInStock.includes(item));
-}
-
-function buyItem(itemsToBuy, refreshDelay) {
-  console.log("Desired Items: ", itemsToBuy)
-  const toBuy = getItemsInStockToBuy(itemsToBuy)
-  if (toBuy.length === 0) {
-      console.log("No items to buy")
-      setTimeout(location.reload.bind(location), refreshDelay);
-  } 
-else {
-      console.log(toBuy)
-      document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
-      document.getElementById('confirm-link').click()
+  if (itemsInStock === []) {
+    setTimeout(location.reload.bind(location), 20000);
+  } else {
+    const toBuy = itemsToBuy.filter(item => itemsInStock.includes(item));
+    if (toBuy.length === 0) {
+        console.log("No items to buy")
+        setTimeout(location.reload.bind(location), refreshDelay);
+    } 
+  else {
+        console.log(toBuy)
+        document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
+        document.getElementById('confirm-link').click()
+    }
   }
 }
 
