@@ -10,7 +10,7 @@ function buyItem(itemsToBuy) {
     const toBuy = getItemsInStockToBuy(itemsToBuy)
     if (toBuy.length === 0) {
         console.log("No items to buy")
-        setTimeout(location.reload.bind(location), 7000);
+        setTimeout(location.reload.bind(location), 9000);
     } 
   else {
         document.querySelector(`.item-img[data-name='${toBuy[0]}']`).click()
