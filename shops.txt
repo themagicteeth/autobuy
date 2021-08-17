@@ -1,0 +1,44 @@
+Easy:
+– Book shop 7
+– Food shop 1
+– Bakery 15
+– Petpet Supplies 69
+– Pharmacy 13
+– Tropical Food Shop 20
+– Chocolate 14
+– Spooky Foods 30
+– Pharmacy 13
+– Gardening 12
+– Pizzaroo 47
+– Grooming Parlour 5
+– Unis Clothing 4
+– Collectable Card Shop 8
+– Fresh Smoothies 18
+– Gift Shop 17
+
+Medium:
+– Plushie Shop 98
+– Toy Shop 3
+– Furniture 41
+– Post Office 58
+– Collectable Sea Shells 86
+– Petpet Shop 25
+– Robopet Shop 26
+– Faerieland Petpets 40
+– Wintery Petpets 61
+– Kayla’s Potions 73
+– Legendary Petpets 97
+
+Hard:
+– Magic Shop 2
+– Defense Magic 10
+– Battle Magic 9
+– Collectable Coin Shop 68
+– Wonderous Weaponry 100
+– Royal Potionary 83
+– The Scrollery 78
+– Exquisite Ambrosia 95
+– Words of Antiquity 92
+– Magic Marvels 96
+– Brightvale Armoury 80
+– Merifoods 56
