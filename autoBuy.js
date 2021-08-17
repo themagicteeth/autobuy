@@ -89,24 +89,7 @@ function smart_haggle(haggle_price){
         if(return_ab) $.find('input[type="submit"]')[1].click();
         return;
     }
-
-    if(url.includes('objects.phtml')){
-       var content = $('table[align="center"][cellpadding="4"][border="0"]').get(0);
-       $(content).find('tr').each((index, tr) => {
-
-           $(tr).find('td').each((index, td) => {
-                const b = $(td).find('b').first().html();
-                if(b === 'Toy Train'){
-                    $(td).remove();
-                } else {
-                    $(td).find('a').first().removeAttr('onclick');
-                }
-           });
-
-       });
-       return;
-    }
-
+  
     if(url.includes('haggle.phtml')){
         var haggle_price = $('#shopkeeper_makes_deal').find('b').get(0).innerHTML;
         haggle_price = (haggle_price.match("([0-9-,]+)")[0]).replace(",", "");
