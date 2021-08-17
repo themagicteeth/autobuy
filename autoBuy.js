@@ -85,11 +85,6 @@ function smart_haggle(haggle_price){
     var $;
     if (typeof $ === 'undefined') $ = unsafeWindow.$;
 
-    if(url === 'http://www.neopets.com/haggle.phtml' || url === 'https://www.neopets.com/haggle.phtml'){
-        if(return_ab) $.find('input[type="submit"]')[1].click();
-        return;
-    }
-  
     if(url.includes('haggle.phtml')){
         var haggle_price = $('#shopkeeper_makes_deal').find('b').get(0).innerHTML;
         haggle_price = (haggle_price.match("([0-9-,]+)")[0]).replace(",", "");
