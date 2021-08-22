@@ -1,12 +1,11 @@
 // ==UserScript==
-// @name        Post Office Auto Buy
+// @name        Post Office
 // @namespace   Neopets Auto Buy
-// @match       https://www.neopets.com/objects.phtml?obj_type=58&type=shop
-// @match       http://www.neopets.com/objects.phtml?obj_type=58&type=shop
-// @match       https://www.neopets.com/haggle.phtml
-// @match       http://www.neopets.com/haggle.phtml
+// @match       *://www.neopets.com/objects.phtml?obj_type=58&type=shop
+// @match       *://www.neopets.com/objects.phtml?type=shop&obj_type=3
+// @match       *://www.neopets.com/haggle.phtml
+// @match       *://www.neopets.com/haggle.phtml*
 // @require     autoBuy.js
-// @require     autoHaggle.js
 // @grant       none
 // @version     1.0
 // @author      -
@@ -56,4 +55,11 @@ const itemsToBuy = [
     "One Hundred Million Neopoint Stamp"
   ]
   
-buyItem(itemsToBuy)
+if (document.URL.includes("objects")) {
+ const FROM = 9000
+ const TO = 17000
+
+ const refreshTimes = Math.floor(Math.random() * parseFloat(TO - FROM)) + parseFloat(FROM)
+
+ buyItem(itemsToBuy, refreshTimes) 
+}
